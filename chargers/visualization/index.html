@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel='stylesheet' type='text/css'>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <title>Back in the sand</title>
+    <style>
+		body {
+		  	font-size: 10px;
+		  	font-family: 'Open Sans', sans-serif;
+		  	font-weight: 400;
+		  	fill: black;
+		  	text-align: center;
+		}
+        h1 {
+            color: #588
+        }
+        #container {
+            display: inline-block;
+        }
+        #chart {
+            padding-top: .5%;
+            border: 3px solid #588;
+            border-radius: 10px 0px 10px 10px;
+            display: inline-block;
+        }
+        #buttons {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0px 0px 0px -5px;
+        }
+        button {
+            padding: 5%;
+            border: 3px solid #588;
+            background: #588;
+            border-radius: 0 10px 10px 0;
+            margin: 0px 0px 3px 0px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <div>
+            <h1>Danmark</h1>
+        </div>
+        <div id="container">
+            <div id="chart">
+                <div id="map"></div>
+                <div id="legend"></div>
+            </div>
+            <div id="buttons">
+                <button id="button_1" onclick="render('usage.csv')">data 1</button>
+                <button id="button_2" onclick=>data 2</button>
+                <button id="button_3">data 3</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        render("usage.csv")
+        function render(path) {
+        
+            var usageData = new Map()
+
+            d3.selectAll("svg").remove();
+
+            Promise.all([
+                d3.json("kommuner.geojson"),
+                if (path == "usage.csv") {
+                    d3.csv(path, function(d) {
+                    usageData.set(d["County"], +d["ConsumptionCoverageMWh_%"])
+                })
+                } else {
+                    
+                }
+                ,
+                //d3.csv("chargers.csv", function(d) {
+                //    chargersData.set(d["County"], +d["ConsumptionCoverageMWh_%"])
+                //})
+            ]).then(function(dataList){
+                let bb = dataList[0]
+                var data = usageData
+                
+                min = d3.min(data, d => d[1]);
+                max = d3.max(data, d => d[1]);
+                
+                var colorScale = d3.scaleLinear().domain([min,max])
+                    .range(["#ACC", "#35F"]);
+
+
+                var totalWidth = d3.select("#map").attr("width");
+                var setWidth = d3.min([totalWidth, window.innerHeight/0.8]);
+                
+                //Width and height
+                var latTop = 57.9;
+                var lonLeft = 7.8;
+                var lonRight = 15.3;
+                var width = setWidth*0.95;
+                var height = width * 0.7;
+                var legend_height = width * 0.05;
+                var zoomExtent = 5;
+                var scale = 55 * width / (lonRight - lonLeft);
+                var kommune = "";
+                var textHeight = (height * 0.032)
+                var xZoomScale = 1
+                var yZoomScale = 1
+
+                let projection = d3.geoMercator()
+                    .scale(scale)
+                    .translate([0, 0]);
+
+                projection.fitSize([width, height * 0.97], bb);
+
+                let geoGenerator = d3.geoPath()
+                    .projection(projection);
+                                
+                let g = d3.select("#map").append("g")
+
+                let svg = g.append("svg")
+                    .style("width", width)
+                    .style("height", height);
+
+                var defs = svg.append("defs");
+                
+                defs.append("pattern")
+                    .attr("id", "diagonalHatch")
+                    .attr("patternUnits", "userSpaceOnUse")
+                    .attr("width", 4)
+                    .attr("height", 4)
+                    .append("path")
+                        .attr("d", "M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2")
+                        .attr("stroke", "#000000")
+                        .attr("stroke-width", 1);
+
+                var map = svg.append("g");
+
+                let legend_svg = d3.select("#legend")
+                    .append("svg")
+                    .style("width", width)
+                    .style("height", legend_height)
+
+                let legend = legend_svg.append("g")
+                    .attr("transform", `translate(${width*0.5},0)`);
+
+                legend.append("rect")
+                    .attr("width", "50%")
+                    .attr("height", legend_height * 0.2)
+                    .style("fill", "url(#linear-gradient)")
+                    .attr("x", "-25%")
+                    //.attr("y", "90%")
+                    
+                var xScale = d3.scaleLinear()
+                    .range([-width*0.5/2, width*0.5/2])
+                    .domain([min,max]);
+
+                var xAxis = d3.axisBottom()
+                    //.ticks(5) 
+                    .scale(xScale);
+
+                legend.append("g")
+                    .attr("class", "axis")
+                    .attr("transform", `translate(0,${legend_height * 0.2})`)
+                    .call(xAxis);
+
+                var linearGradient = defs.append("linearGradient")
+                    .attr("id", "linear-gradient")
+                    .selectAll("stop")
+                    .data( colorScale.range() )
+                    .enter().append("stop")
+                    .attr("offset", function(d,i) { return i/(colorScale.range().length-1); })
+                    .attr("stop-color", function(d) { return d; });
+
+                map.selectAll("path")
+                    .attr("class", "kommunes")
+                    .data(bb.features)
+                    .join("path")
+                    .attr("d", geoGenerator)
+                    .attr("fill", (d,i) => data.get(d.properties.KOMNAVN) ? colorScale(data.get(d.properties.KOMNAVN)) : "url(#diagonalHatch)")
+                    .attr("stroke", "#000")
+                    .attr("stroke-width", .5)
+                    .on("mouseover", function(m, d, i) {
+                        var highlightKom = d.properties.KOMNAVN
+                        d3.selectAll(".kommunes").filter(function(d) {
+                            return d.properties.KOMNAVN == highlightKom
+                        })
+                        .attr("fill-opacity", "0.75");
+                        tooltip.style("display", null);
+                    })
+                    .on("mouseout", function(m, d, i) {
+                        var highlightKom = d.properties.KOMNAVN
+                        d3.selectAll(".kommunes").filter(d => d.properties.KOMNAVN == highlightKom)
+                        .attr("fill-opacity", "1");
+                        tooltip.style("display", "none");  
+                    })
+                    .on("mousemove", function(m, d) {
+                        var xPosition = (d3.pointer(event)[0])-5/xZoomScale;
+                        var yPosition = (d3.pointer(event)[1])-5/yZoomScale;
+                        tooltip.attr("transform", "translate(" + xPosition + "," + yPosition + ")");
+                        tooltip.text(`${d.properties.KOMNAVN}: ${data.get(d.properties.KOMNAVN) ? data.get(d.properties.KOMNAVN) : "N/A"}%`);
+                    });
+
+                var tooltip = map.append("text")
+                    .attr("id", "tooltip")
+                    .style("display", "none")
+                    .style("text-anchor", "end")
+                    .attr("font-size", textHeight)
+                    .attr("font-weight", "bold");
+
+                var trans = projection([lonLeft, latTop]);
+                projection.translate([-1 * trans[0], -1 * trans[1]]);
+
+                var zoom = d3.zoom()
+                    .scaleExtent([1, zoomExtent])
+                    .translateExtent([
+                        [0, 0],
+                        [width, height]
+                    ])
+                    .on("zoom", zoomed);
+
+                svg.call(zoom);
+
+                function zoomed(event) {
+                    map.attr("transform", event.transform)
+
+                    map.selectAll("#tooltip")
+                        .attr("font-size", function() {
+                            var textHeight = (height * 0.032) / (event.transform.k);
+                            return textHeight;
+                        })
+                        .attr("transform", function() {
+                            xZoomScale = event.transform.k;
+                            yZoomScale = event.transform.k;
+                        });
+                };
+
+            });
+        }
+
+    </script>
+</body>
+</html>
