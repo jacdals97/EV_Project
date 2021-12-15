@@ -1,0 +1,93 @@
+---
+title: "DST data cleaning"
+output: html_document
+---
+
+```{r}
+library(readxl)
+
+
+
+
+# Import the EV data from Danmarks Statistik
+ev_sales <- read_excel("Danmarks_statistik/2021102813564349600816BIL710.xlsx", skip = 3)
+
+names(ev_sales)[1] <- "Region/city"
+names(ev_sales)[2] <- "year"
+names(ev_sales)[3] <- "sales"
+
+for (i in 1:nrow(ev_sales)) {
+  if (is.na(ev_sales$`Region/city`[i]) == TRUE) {
+    ev_sales$`Region/city`[i] <- ev_sales$`Region/city`[i-1]
+    }
+  }
+
+```
+
+
+```{r}
+# Import population data from Danmarks Statistik
+library(pacman)
+p_load(tidyr, readxl, dplyr)
+
+DST_pop_raw <- read_excel("Danmarks_statistik/DST_pop.xlsx")
+DST_pop <- DST_pop_raw[1:1898,] # remove Area_size variable and density variable
+DST_pop <- DST_pop[3:nrow(DST_pop),]
+
+
+# Clean population df
+names(DST_pop)[2] <- "Area"
+names(DST_pop)[3] <- "2017"
+names(DST_pop)[4] <- "2018"
+names(DST_pop)[5] <- "2019"
+names(DST_pop)[6] <- "2020"
+names(DST_pop)[7] <- "2021"
+
+
+long_dst <- DST_pop %>% gather(year, pop, 3:7) # Change to long format
+
+long_dst <- long_dst %>%  separate(Area, c("Area_ID", "Area_name"), sep = " ", extra='merge')
+
+long_dst <- long_dst[,2:5]
+
+long_dst <- long_dst[1:9479,]
+
+
+
+# Select only population density
+DST_pop_density <- DST_pop_raw[3793:nrow(DST_pop_raw),]
+
+
+# Clean density df
+names(DST_pop_density)[2] <- "Area"
+names(DST_pop_density)[3] <- "2017"
+names(DST_pop_density)[4] <- "2018"
+names(DST_pop_density)[5] <- "2019"
+names(DST_pop_density)[6] <- "2020"
+names(DST_pop_density)[7] <- "2021"
+
+long_pop_density <- DST_pop_density %>% gather(year, pop_density, 3:7)
+long_pop_density <- long_pop_density %>% separate(Area, c("Area_ID", "Area_name"), sep = " ", extra='merge')
+
+long_pop_density <- long_pop_density[,2:5]
+
+
+```
+
+
+```{r}
+
+# create a common, long format dataframe for both population and population density
+long <- inner_join(long_dst, long_pop_density, by= c("year", "Area_ID"))
+
+long$pop <- as.numeric(long$pop)
+long$pop_density <-  as.numeric(long$pop_density)
+long <- long[,-5]
+
+
+write.csv(long, file = "Datasets/aggregated/population_stats.csv")
+
+write.csv(ev_sales, file = "Datasets/aggregated/ev_population.csv")
+```
+
+

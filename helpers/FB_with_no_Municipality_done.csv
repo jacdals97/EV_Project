@@ -1,0 +1,41 @@
+﻿Column1;Unnamed: 0;City id;DST_name;City;Region;Region id;Lower bound;Upper bound;Municipality
+3;3;609936;Ejby;Ejby;Region Hovedstaden;4133;1000;1000;Glostrup Kommune
+4;7;613812;Nyhavn;Nyhavn;Region Hovedstaden;4133;1000;1000;Københavns Kommune
+7;13;611539;Höje Taastrup;Höje Taastrup;Region Hovedstaden;4133;1000;1000;
+23;49;611767;Hundige;Hundige;Region Sjælland;4132;1500;1800;Greve Kommune
+28;60;611319;Herfølge;Herfølge;Region Sjælland;4132;1000;1100;Køge Kommune
+34;80;612269;Kirke Hyllinge;Kirke-Hyllinge;Region Sjælland;4132;1000;1000;Lejre Kommune
+49;113;611540;Høje Tåstrup;Høje Tåstrup;Region Hovedstaden;4133;2400;2800;Høje-Taastrup Kommune
+51;115;609474;Bredballe;Bredballe;Region Syddanmark;4134;1600;1800;Vejle Kommune
+57;121;610305;Flemming;Flemming;Region Midtjylland;4131;1000;1000;Hedensted Kommune
+64;137;608971;Ballerup;Ballerup;Region Hovedstaden;4133;5200;6100;Ballerup Kommune
+71;144;609555;Brøndbyvester;Brøndbyvester;Region Hovedstaden;4133;1600;1900;Brøndby Kommune
+117;202;615611;Sønder Galten;Sonder Galten;Region Midtjylland;4131;1100;1300;Skanderborg Kommune
+128;213;613826;Nykøbing F;Nykjobing;Region Sjælland;4132;3200;3800;Guldborgsund Kommune
+135;223;616930;Værløse;Værløse;Region Sjælland;4132;1000;1000;Furesø Kommune
+136;224;612282;Kirke Værløse;Kirke-Værløse;Region Hovedstaden;4133;1000;1000;Furesø Kommune
+158;255;614284;Ovtrup;Ovtrup;Region Syddanmark;4134;1000;1000;Varde Kommune
+170;273;609230;Blåvand;Blåvand;Region Syddanmark;4134;1000;1000;Varde Kommune
+171;277;611458;Hjerting;Hjerting;Region Syddanmark;4134;1000;1100;Esbjerg Kommune
+173;279;611314;Henne Stationsby;Henne Strand;Region Syddanmark;4134;1000;1000;Varde Kommune
+178;287;613243;Mejrup;Mejrup;Region Midtjylland;4131;1000;1000;Holstebro Kommune
+179;288;615712;Søndervig;Søndervig;Region Midtjylland;4131;1000;1000;Ringkøbing-Skjern Kommune
+188;309;614598;Ringkjöbing;Ringkjöbing;Region Midtjylland;4131;1000;1000;
+192;319;616153;Svebølle;Svebölle;Region Sjælland;4132;1000;1000;Kalundborg Kommune
+207;334;617208;Vester Skerninge;Vester-Skerninge;Region Syddanmark;4134;1000;1000;Svendborg kommune
+224;363;614258;Overlund;Overlund;Region Midtjylland;4131;1100;1300;Viborg Kommune
+248;396;616376;Tilst;Tilst;Region Midtjylland;4131;1500;1800;Aarhus Kommune
+249;397;612808;Lemvig;Lemvig;Region Midtjylland;4131;2700;3100;Lemvig Kommune
+250;401;613829;Nykøbing M;Nykøbing Mors;Region Nordjylland;851;1400;1700;Morsø Kommune
+255;406;611792;Hvalsø;Hvalsø;Region Sjælland;4132;1000;1000;Lejre Kommune
+265;416;610130;Faxe Ladeplads;Fakse Ladeplads;Region Sjælland;4132;1000;1000;Faxe Kommune
+302;453;613049;Lunderskov;Lunderskov;Region Syddanmark;4134;1000;1000;Kolding Kommune
+307;458;611708;Hou;Hou Hals;Region Nordjylland;851;1000;1000;Aalborg Kommune
+308;459;611065;Håls;Håls;Region Nordjylland;851;1000;1000;Aalborg Kommune
+311;462;612328;Klampenborg;Klampenborg;Region Hovedstaden;4133;1000;1000;Gentofte Kommune
+315;466;615450;Snekkersten;Snekkersten;Region Hovedstaden;4133;1000;1000;Helsingør Kommune
+335;489;615898;Stenstrup;Stenstrup;Region Sjælland;4132;1000;1000;Helsingør Kommune
+358;512;608665;Allinge;Allinge;Region Hovedstaden;4133;1000;1000;Bornholm Kommune
+365;519;616417;Tisvildeleje;Tisvildeleje;Region Hovedstaden;4133;1000;1000;Gribskov Kommune
+370;524;614700;Rømø Kirkeby;Rømø Kirkeby;Region Syddanmark;4134;1000;1000;Tønder Kommune
+380;534;610169;Fårup;Fårup;Region Nordjylland;851;1000;1000;Jammerbugt Kommune
