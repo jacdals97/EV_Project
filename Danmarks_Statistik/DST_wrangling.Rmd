@@ -6,8 +6,11 @@ output: html_document
 ```{r}
 library(readxl)
 
+
+
+
 # Import the EV data from Danmarks Statistik
-ev_sales <- read_excel("2021102813564349600816BIL710.xlsx", skip = 3)
+ev_sales <- read_excel("Danmarks_statistik/2021102813564349600816BIL710.xlsx", skip = 3)
 
 names(ev_sales)[1] <- "Region/city"
 names(ev_sales)[2] <- "year"
@@ -27,7 +30,7 @@ for (i in 1:nrow(ev_sales)) {
 library(pacman)
 p_load(tidyr, readxl, dplyr)
 
-DST_pop_raw <- read_excel("DST_pop.xlsx")
+DST_pop_raw <- read_excel("Danmarks_statistik/DST_pop.xlsx")
 DST_pop <- DST_pop_raw[1:1898,] # remove Area_size variable and density variable
 DST_pop <- DST_pop[3:nrow(DST_pop),]
 
@@ -82,7 +85,9 @@ long$pop_density <-  as.numeric(long$pop_density)
 long <- long[,-5]
 
 
-write.csv(long, file = "population_stats.csv")
+write.csv(long, file = "Datasets/aggregated/population_stats.csv")
+
+write.csv(ev_sales, file = "Datasets/aggregated/ev_population.csv")
 ```
 
 
