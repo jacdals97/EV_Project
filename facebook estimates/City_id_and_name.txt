@@ -1,0 +1,458 @@
+608447,"Aalborg, Denmark",North Denmark Region,851
+608476,"Aarhus, Denmark",Central Denmark Region,4131
+609672,København,Capital Region of Denmark,4133
+609936,"Ejby, Kobenhavn, Denmark",Capital Region of Denmark,4133
+613812,"Nyhavn, København, Denmark",Capital Region of Denmark,4133
+612791,"Lejre, Kobenhavn, Denmark",Zealand Region,4132
+615258,"Skodsborg, Kobenhavn, Denmark",Capital Region of Denmark,4133
+611539,"Höje Taastrup, Kobenhavn, Denmark",Capital Region of Denmark,4133
+609554,"Brøndby Strand, Kobenhavn, Denmark",Capital Region of Denmark,4133
+616689,"Trørød, Kobenhavn, Denmark",Capital Region of Denmark,4133
+613423,"Nærum, Kobenhavn, Denmark",Capital Region of Denmark,4133
+615428,"Smørumnedre, Kobenhavn, Denmark",Capital Region of Denmark,4133
+613579,Nordby,Region of Southern Denmark,4134
+610385,Frederiksberg,Zealand Region,4132
+610386,"Frederiksberg, Frederiksberg, Denmark",Capital Region of Denmark,4133
+612464,"Kolding, Denmark",Region of Southern Denmark,4134
+612488,Kongens Lyngby,Capital Region of Denmark,4133
+613272,"Middelfart, Denmark",Region of Southern Denmark,4134
+609937,Ejby,Zealand Region,4132
+613882,Odder,Central Denmark Region,4131
+613891,"Odense, Denmark",Region of Southern Denmark,4134
+614445,"Randers, Denmark",Central Denmark Region,4131
+614743,"Roskilde, Denmark",Zealand Region,4132
+611767,"Hundige, Roskilde, Denmark",Zealand Region,4132
+616998,"Veddelev, Roskilde, Denmark",Zealand Region,4132
+609138,"Bjæverskov, Roskilde, Denmark",Zealand Region,4132
+616077,"Strøby Egede, Roskilde, Denmark",Zealand Region,4132
+612268,"Kirke Hvalsø, Roskilde, Denmark",Zealand Region,4132
+611319,"Herfølge, Roskilde, Denmark",Zealand Region,4132
+612798,"Lellinge, Roskilde, Denmark",Zealand Region,4132
+611125,"Hårlev, Roskilde, Denmark",Zealand Region,4132
+617322,"Vindinge, Roskilde, Denmark",Zealand Region,4132
+612120,"Karlslunde, Roskilde, Denmark",Zealand Region,4132
+616200,"Svogerslev, Roskilde, Denmark",Zealand Region,4132
+612269,"Kirke-Hyllinge, Roskilde, Denmark",Zealand Region,4132
+611183,"Havdrup, Roskilde, Denmark",Zealand Region,4132
+615539,"Solrød, Roskilde, Denmark",Zealand Region,4132
+614057,"Osted, Roskilde, Denmark",Zealand Region,4132
+617253,"Viby, Roskilde, Denmark",Zealand Region,4132
+610509,"Gadstrup, Roskilde, Denmark",Zealand Region,4132
+609365,"Borup, Roskilde, Denmark",Zealand Region,4132
+608585,"Ågerup, Roskilde, Denmark",Zealand Region,4132
+615010,"Silkeborg, Denmark",Central Denmark Region,4131
+615220,"Skive, Denmark",Central Denmark Region,4131
+615361,Slagelse,Zealand Region,4132
+616159,Svendborg,Region of Southern Denmark,4134
+615579,"Sønderborg, Denmark",Region of Southern Denmark,4134
+610823,Gråsten,Region of Southern Denmark,4134
+616238,Taastrup,Capital Region of Denmark,4133
+611539,"Höje Taastrup, Kobenhavn, Denmark",Capital Region of Denmark,4133
+611540,Høje Tåstrup,Capital Region of Denmark,4133
+617048,"Vejle, Denmark",Region of Southern Denmark,4134
+609474,"Bredballe, Vejle, Denmark",Region of Southern Denmark,4134
+609952,"Ejstrupholm, Vejle, Denmark",Central Denmark Region,4131
+616839,"Uldum, Vejle, Denmark",Central Denmark Region,4131
+615470,"Snoghøj, Vejle, Denmark",Region of Southern Denmark,4134
+616035,"Stouby, Vejle, Denmark",Central Denmark Region,4131
+617367,"Viuf, Vejle, Denmark",Region of Southern Denmark,4134
+610305,"Flemming, Vejle, Denmark",Central Denmark Region,4131
+608667,"Almind, Vejle, Denmark",Region of Southern Denmark,4134
+616555,"Tørring, Vejle, Denmark",Central Denmark Region,4131
+616958,"Vandel, Vejle, Denmark",Region of Southern Denmark,4134
+615192,"Skibet, Vejle, Denmark",Region of Southern Denmark,4134
+610839,"Grejs, Vejle, Denmark",Region of Southern Denmark,4134
+609897,"Egebjerg, Vejle, Denmark",Central Denmark Region,4131
+608971,Ballerup,Capital Region of Denmark,4133
+611009,"Haderslev, Sonderjylland, Denmark",Region of Southern Denmark,4134
+611324,"Herning, Denmark",Central Denmark Region,4131
+612155,"Kastrup, Denmark",Capital Region of Denmark,4133
+612889,Lillerød,Capital Region of Denmark,4133
+609583,Brovst,North Denmark Region,851
+2674446,Brøndby,Capital Region of Denmark,4133
+609554,"Brøndby Strand, Kobenhavn, Denmark",Capital Region of Denmark,4133
+609555,Brøndbyvester,Capital Region of Denmark,4133
+610062,"Esbjerg, Denmark",Region of Southern Denmark,4134
+610756,Glostrup,Capital Region of Denmark,4133
+611818,Hvidovre,Capital Region of Denmark,4133
+613442,Næstved,Zealand Region,4132
+614658,Rødovre,Capital Region of Denmark,4133
+610382,Fredericia,Region of Southern Denmark,4134
+611388,Hillerød,Capital Region of Denmark,4133
+615113,Skanderborg,Central Denmark Region,4131
+614820,"Ry, Denmark",Central Denmark Region,4131
+616284,"Tarm, Ringkobing, Denmark",Central Denmark Region,4131
+608422,"Aabenraa, Sonderjylland, Denmark",Region of Southern Denmark,4134
+610635,Gentofte,Capital Region of Denmark,4133
+610685,"Give, Denmark",Region of Southern Denmark,4134
+611321,Herlev Kommune,Capital Region of Denmark,4133
+611320,"Herlev, Frederiksborg, Denmark",Capital Region of Denmark,4133
+611608,"Holstebro, Denmark",Central Denmark Region,4131
+611753,"Humlebæk, Frederiksborg, Denmark",Capital Region of Denmark,4133
+609558,Brønderslev,North Denmark Region,851
+614084,"Øster Brønderslev, Nordjylland, Denmark",North Denmark Region,851
+610851,Greve Strand,Zealand Region,4132
+610393,Frederikshavn,North Denmark Region,851
+614835,Sæby,North Denmark Region,851
+611679,Hørsholm,Capital Region of Denmark,4133
+617255,Videbæk,Central Denmark Region,4131
+613210,"Mårslet, Arhus, Denmark",Central Denmark Region,4131
+611614,Holte,Capital Region of Denmark,4133
+610550,"Gammel Holte, Kobenhavn, Denmark",Capital Region of Denmark,4133
+614608,Ringsted,Zealand Region,4132
+611469,Hjørring,North Denmark Region,851
+611500,"Hobro, Denmark",North Denmark Region,851
+612450,"Kokkedal, Frederiksborg, Denmark",Capital Region of Denmark,4133
+614628,"Risskov, Arhus, Denmark",Central Denmark Region,4131
+611563,Holbæk,Zealand Region,4132
+608739,"Ansager, Ribe, Denmark",Region of Southern Denmark,4134
+610402,Frederiksværk,Capital Region of Denmark,4133
+611288,"Helsinge, Denmark",Capital Region of Denmark,4133
+616348,Thisted,North Denmark Region,851
+611291,"Helsingør, Denmark",Capital Region of Denmark,4133
+609090,Birkerød,Capital Region of Denmark,4133
+609800,"Dragør, Denmark",Capital Region of Denmark,4133
+610167,Farum,Capital Region of Denmark,4133
+610380,"Fredensborg, Frederiksborg, Denmark",Capital Region of Denmark,4133
+610400,Frederikssund,Capital Region of Denmark,4133
+615284,Galten,Central Denmark Region,4131
+610520,Galten,Central Denmark Region,4131
+615611,"Sonder Galten, Arhus, Denmark",Central Denmark Region,4131
+610662,"Gesten, Ribe, Denmark",Region of Southern Denmark,4134
+610922,"Gudhjem, Bornholm, Denmark",Capital Region of Denmark,4133
+611013,Hadsten,Central Denmark Region,4131
+611156,Haslev,Zealand Region,4132
+612090,Kalundborg,Zealand Region,4132
+612135,Karup,Central Denmark Region,4131
+612528,Korsør,Zealand Region,4132
+613130,"Lystrup, Arhus, Denmark",Central Denmark Region,4131
+613575,Nordborg,Region of Southern Denmark,4134
+613720,Nørresundby,North Denmark Region,851
+613826,Nykjobing,Zealand Region,4132
+614821,Ryslinge,Region of Southern Denmark,4134
+614820,"Ry, Denmark",Central Denmark Region,4131
+614829,"Sabro, Arhus, Denmark",Central Denmark Region,4131
+615540,Solrød Strand,Zealand Region,4132
+615736,Sorø,Zealand Region,4132
+617422,"Vordingborg, Denmark",Zealand Region,4132
+616929,Værløse,Capital Region of Denmark,4133
+616930,"Værløse, Storstrom, Denmark",Zealand Region,4132
+612282,"Kirke-Værløse, Kobenhavn, Denmark",Capital Region of Denmark,4133
+613944,Ølstykke,Capital Region of Denmark,4133
+613945,"Ølstykke Stationsby, Frederiksborg, Denmark",Capital Region of Denmark,4133
+609181,Bjerringbro,Central Denmark Region,4131
+611410,Hinnerup,Central Denmark Region,4131
+613786,"Nyborg, Denmark",Region of Southern Denmark,4134
+615307,Skovlunde,Capital Region of Denmark,4133
+612442,Køge,Zealand Region,4132
+608873,"Aulum, Ringkobing, Denmark",Central Denmark Region,4131
+612331,"Klarup, Nordjylland, Denmark",North Denmark Region,851
+615428,"Smørumnedre, Kobenhavn, Denmark",Capital Region of Denmark,4133
+615429,"Smørumovre, Kobenhavn, Denmark",Capital Region of Denmark,4133
+611916,Ishøj,Capital Region of Denmark,4133
+609439,Brande,Central Denmark Region,4131
+615269,Skørping,North Denmark Region,851
+609069,"Billund, Ribe, Denmark",Region of Southern Denmark,4134
+611889,Ikast,Central Denmark Region,4131
+610053,"Erslev, Viborg, Denmark",North Denmark Region,851
+611323,"Herlufmagle, Storstrom, Denmark",Zealand Region,4132
+614740,"Rørvig, Vestsjalland, Denmark",Zealand Region,4132
+615094,Skagen,North Denmark Region,851
+617391,Vojens,Region of Southern Denmark,4134
+2674687,Ribe,Region of Southern Denmark,4134
+614284,"Ovtrup, Ribe, Denmark",Region of Southern Denmark,4134
+609068,"Billum, Ribe, Denmark",Region of Southern Denmark,4134
+615007,"Sig, Ribe, Denmark",Region of Southern Denmark,4134
+611931,"Janderup, Ribe, Denmark",Region of Southern Denmark,4134
+608689,"Alslev, Ribe, Denmark",Region of Southern Denmark,4134
+611255,"Hejnsvig, Ribe, Denmark",Region of Southern Denmark,4134
+610743,"Glejbjerg, Ribe, Denmark",Region of Southern Denmark,4134
+613587,"Nordenskov, Ribe, Denmark",Region of Southern Denmark,4134
+608810,"Askov, Ribe, Denmark",Region of Southern Denmark,4134
+616978,"Varde, Ribe, Denmark",Region of Southern Denmark,4134
+616415,"Tistrup, Ribe, Denmark",Region of Southern Denmark,4134
+610836,"Gredstedbro, Ribe, Denmark",Region of Southern Denmark,4134
+609230,"Blåvand, Ribe, Denmark",Region of Southern Denmark,4134
+608739,"Ansager, Ribe, Denmark",Region of Southern Denmark,4134
+611458,"Hjerting, Ribe, Denmark",Region of Southern Denmark,4134
+609069,"Billund, Ribe, Denmark",Region of Southern Denmark,4134
+617030,"Vejen, Ribe, Denmark",Region of Southern Denmark,4134
+611314,"Henne Strand, Ribe, Denmark",Region of Southern Denmark,4134
+615189,Skibby,Capital Region of Denmark,4133
+614821,Ryslinge,Region of Southern Denmark,4134
+614599,Ringkøbing,Central Denmark Region,4131
+611451,"Hjerm, Ringkobing, Denmark",Central Denmark Region,4131
+612802,"Lem, Ringkobing, Denmark",Central Denmark Region,4131
+613243,"Mejrup, Ringkobing, Denmark",Central Denmark Region,4131
+615712,"Søndervig, Ringkobing, Denmark",Central Denmark Region,4131
+609330,"Bording, Ringkobing, Denmark",Central Denmark Region,4131
+616756,"Tvis, Ringkobing, Denmark",Central Denmark Region,4131
+615779,"Spjald, Ringkobing, Denmark",Central Denmark Region,4131
+611815,"Hvide Sande, Ringkobing, Denmark",Central Denmark Region,4131
+616284,"Tarm, Ringkobing, Denmark",Central Denmark Region,4131
+615144,"Skave, Ringkobing, Denmark",Central Denmark Region,4131
+616842,"Ulfborg, Ringkobing, Denmark",Central Denmark Region,4131
+610025,"Engesvang, Ringkobing, Denmark",Central Denmark Region,4131
+617276,"Vildbjerg, Ringkobing, Denmark",Central Denmark Region,4131
+614598,"Ringkjöbing, Ringkobing, Denmark",Central Denmark Region,4131
+616137,"Sunds, Ringkobing, Denmark",Central Denmark Region,4131
+608873,"Aulum, Ringkobing, Denmark",Central Denmark Region,4131
+616379,"Tim, Ringkobing, Denmark",Central Denmark Region,4131
+616958,"Vandel, Vejle, Denmark",Region of Southern Denmark,4134
+608779,Årslev,Region of Southern Denmark,4134
+616153,"Svebölle, Vestsjalland, Denmark",Zealand Region,4132
+608429,Aabybro,North Denmark Region,851
+612308,Kjellerup,Central Denmark Region,4131
+609885,"Egå, Arhus, Denmark",Central Denmark Region,4131
+610868,Grindsted,Region of Southern Denmark,4134
+611081,"Hammel, Denmark",Central Denmark Region,4131
+615853,"Stavtrup, Arhus, Denmark",Central Denmark Region,4131
+617347,Virum,Capital Region of Denmark,4133
+617067,Veksø,Capital Region of Denmark,4133
+615689,Søndersø,Region of Southern Denmark,4134
+615134,"Skårup, Fyn, Denmark",Region of Southern Denmark,4134
+611234,Hedensted,Central Denmark Region,4131
+616084,Struer,Central Denmark Region,4131
+609338,Børkop,Region of Southern Denmark,4134
+616978,"Varde, Ribe, Denmark",Region of Southern Denmark,4134
+617272,"Vig, Vestsjalland, Denmark",Zealand Region,4132
+617208,"Vester-Skerninge, Fyn, Denmark",Region of Southern Denmark,4134
+611522,"Højbjerg, Arhus, Denmark",Central Denmark Region,4131
+615237,Skjern,Central Denmark Region,4131
+616955,Vamdrup,Region of Southern Denmark,4134
+617249,"Viborg, Denmark",Central Denmark Region,4131
+612376,"Klitmøller, Viborg, Denmark",North Denmark Region,851
+617303,"Vils, Viborg, Denmark",North Denmark Region,851
+614983,"Sennels, Viborg, Denmark",North Denmark Region,851
+610611,"Gedsted, Viborg, Denmark",North Denmark Region,851
+613756,"Nors, Viborg, Denmark",North Denmark Region,851
+609036,"Bedsted, Viborg, Denmark",North Denmark Region,851
+610390,"Frederiks, Viborg, Denmark",Central Denmark Region,4131
+615443,"Snedsted, Viborg, Denmark",North Denmark Region,851
+615108,"Skals, Viborg, Denmark",Central Denmark Region,4131
+616877,"Ulstrup, Viborg, Denmark",Central Denmark Region,4131
+615929,"Stoholm, Viborg, Denmark",Central Denmark Region,4131
+608740,"Ans, Viborg, Denmark",Central Denmark Region,4131
+614258,"Overlund, Viborg, Denmark",Central Denmark Region,4131
+614744,"Roslev, Viborg, Denmark",Central Denmark Region,4131
+611781,"Hurup, Viborg, Denmark",North Denmark Region,851
+610053,"Erslev, Viborg, Denmark",North Denmark Region,851
+608618,Albertslund,Capital Region of Denmark,4133
+614716,Rønne,Capital Region of Denmark,4133
+614715,Rønnede,Zealand Region,4132
+616046,Støvring,North Denmark Region,851
+610102,Faaborg,Region of Southern Denmark,4134
+612213,Kerteminde,Region of Southern Denmark,4134
+609510,"Brenderup, Fyn, Denmark",Region of Southern Denmark,4134
+609662,Charlottenlund,Capital Region of Denmark,4133
+616032,Storvorde,North Denmark Region,851
+613620,"Nørre Asmindrup, Vestsjalland, Denmark",Zealand Region,4132
+614744,"Roslev, Viborg, Denmark",Central Denmark Region,4131
+610743,"Glejbjerg, Ribe, Denmark",Region of Southern Denmark,4134
+616171,"Svenstrup, Nordjylland, Denmark",North Denmark Region,851
+609879,Ebeltoft,Central Denmark Region,4131
+611995,Juelsminde,Central Denmark Region,4131
+612985,"Løkken, Nordjylland, Denmark",North Denmark Region,851
+611230,Hedehusene,Capital Region of Denmark,4133
+613450,Nakskov,Zealand Region,4132
+614835,Sæby,North Denmark Region,851
+611414,Hirtshals,North Denmark Region,851
+611661,"Hornslet, Arhus, Denmark",Central Denmark Region,4131
+610841,Grenaa,Central Denmark Region,4131
+609409,Brabrand,Central Denmark Region,4131
+613610,Nørre Aaby,Region of Southern Denmark,4134
+616376,"Tilst, Arhus, Denmark",Central Denmark Region,4131
+612808,Lemvig,Central Denmark Region,4131
+613829,Nykøbing Mors,North Denmark Region,851
+612791,"Lejre, Kobenhavn, Denmark",Zealand Region,4132
+608481,Aars,North Denmark Region,851
+609930,Egtved,Region of Southern Denmark,4134
+610085,"Espergærde, Frederiksborg, Denmark",Capital Region of Denmark,4133
+611160,"Hasselager, Arhus, Denmark",Central Denmark Region,4131
+611792,Hvalsø,Zealand Region,4132
+612268,"Kirke Hvalsø, Roskilde, Denmark",Zealand Region,4132
+611925,Jægerspris,Capital Region of Denmark,4133
+612275,"Kirke Såby, Roskilde, Denmark",Zealand Region,4132
+613007,"Løsning, Vejle, Denmark",Central Denmark Region,4131
+613178,"Malling, Arhus, Denmark",Central Denmark Region,4131
+614593,"Ringe, Fyn, Denmark",Region of Southern Denmark,4134
+614706,Rønde,Central Denmark Region,4131
+615366,Slangerup,Capital Region of Denmark,4133
+615967,Store Heddinge,Zealand Region,4132
+609432,Bramming,Region of Southern Denmark,4134
+610130,Fakse Ladeplads,Zealand Region,4132
+610462,Fuglebjerg,Zealand Region,4132
+612011,Jyllinge,Zealand Region,4132
+612120,"Karlslunde, Roskilde, Denmark",Zealand Region,4132
+613200,Mariager,North Denmark Region,851
+613391,Munkebo,Region of Southern Denmark,4134
+613526,Nibe,North Denmark Region,851
+613541,Nivå,Capital Region of Denmark,4133
+613423,"Nærum, Kobenhavn, Denmark",Capital Region of Denmark,4133
+614210,Otterup,Region of Southern Denmark,4134
+614774,Rudkøbing,Region of Southern Denmark,4134
+614640,Rødding,Region of Southern Denmark,4134
+614645,Rødekro,Region of Southern Denmark,4134
+615075,Skælskør,Zealand Region,4132
+615262,"Skødstrup, Arhus, Denmark",Central Denmark Region,4131
+616345,"Them, Denmark",Central Denmark Region,4131
+616723,"Tureby, Roskilde, Denmark",Zealand Region,4132
+616993,Vedbæk,Capital Region of Denmark,4133
+617378,"Vodskov, Nordjylland, Denmark",North Denmark Region,851
+613349,"Mørkøv, Vestsjalland, Denmark",Zealand Region,4132
+615929,"Stoholm, Viborg, Denmark",Central Denmark Region,4131
+613201,Maribo,Zealand Region,4132
+608871,"Augustenborg, Denmark",Region of Southern Denmark,4134
+611015,Hadsund,North Denmark Region,851
+611183,"Havdrup, Roskilde, Denmark",Zealand Region,4132
+612740,Langeskov,Region of Southern Denmark,4134
+616509,Tønder,Region of Southern Denmark,4134
+611536,Højer,Region of Southern Denmark,4134
+610748,"Glesborg, Arhus, Denmark",Central Denmark Region,4131
+612269,"Kirke-Hyllinge, Roskilde, Denmark",Zealand Region,4132
+616853,Ullerslev,Region of Southern Denmark,4134
+616280,"Tappernøje, Storstrom, Denmark",Zealand Region,4132
+616555,"Tørring, Vejle, Denmark",Central Denmark Region,4131
+613633,"Nørre Broby, Fyn, Denmark",Region of Southern Denmark,4134
+609530,"Brobyværk, Fyn, Denmark",Region of Southern Denmark,4134
+616940,Vallensbæk,Capital Region of Denmark,4133
+614370,Præstø,Zealand Region,4132
+616503,Tommerup,Region of Southern Denmark,4134
+616501,"Tommerup Stationsby, Fyn, Denmark",Region of Southern Denmark,4134
+609365,"Borup, Roskilde, Denmark",Zealand Region,4132
+610164,Farsø,North Denmark Region,851
+610684,"Gistrup, Nordjylland, Denmark",North Denmark Region,851
+610735,Glamsbjerg,Region of Southern Denmark,4134
+610992,Haarby,Region of Southern Denmark,4134
+613049,Lunderskov,Region of Southern Denmark,4134
+615577,"Sønder Bjert, Vejle, Denmark",Region of Southern Denmark,4134
+610823,Gråsten,Region of Southern Denmark,4134
+617276,"Vildbjerg, Ringkobing, Denmark",Central Denmark Region,4131
+610670,Gilleleje,Capital Region of Denmark,4133
+614055,"Østbirk, Vejle, Denmark",Central Denmark Region,4131
+615787,Spøttrup,Central Denmark Region,4131
+611708,"Hou Hals, Nordjylland, Denmark",North Denmark Region,851
+611065,"Håls, Nordjylland, Denmark",North Denmark Region,851
+613525,Nexø,Capital Region of Denmark,4133
+616922,Væggerløse,Zealand Region,4132
+611815,"Hvide Sande, Ringkobing, Denmark",Central Denmark Region,4131
+612328,"Klampenborg, Kobenhavn, Denmark",Capital Region of Denmark,4133
+610156,"Fårevejle Stationsby, Vestsjalland, Denmark",Zealand Region,4132
+610155,"Fårevejle, Vestsjalland, Denmark",Zealand Region,4132
+608874,"Auning, Arhus, Denmark",Central Denmark Region,4131
+615450,"Snekkersten, Frederiksborg, Denmark",Capital Region of Denmark,4133
+611651,"Hornbæk, Frederiksborg, Denmark",Capital Region of Denmark,4133
+612895,"Lille Skensved, Roskilde, Denmark",Zealand Region,4132
+613713,Nørre Snede,Central Denmark Region,4131
+617253,"Viby, Roskilde, Denmark",Zealand Region,4132
+616720,"Tune, Denmark",Zealand Region,4132
+611125,"Hårlev, Roskilde, Denmark",Zealand Region,4132
+611124,"Harlev, Arhus, Denmark",Central Denmark Region,4131
+609414,Brædstrup,Central Denmark Region,4131
+609822,Dronninglund,North Denmark Region,851
+616919,"Vadum, Nordjylland, Denmark",North Denmark Region,851
+611609,Holsted,Region of Southern Denmark,4134
+611781,"Hurup, Viborg, Denmark",North Denmark Region,851
+614122,"Øster Hurup, Nordjylland, Denmark",North Denmark Region,851
+612974,Løgumkloster,Region of Southern Denmark,4134
+609577,Brørup,Region of Southern Denmark,4134
+612008,"Jyderup, Vestsjalland, Denmark",Zealand Region,4132
+613615,Nørre Alslev,Zealand Region,4132
+615023,Sindal,North Denmark Region,851
+616120,Sulsted,North Denmark Region,851
+617355,Vissenbjerg,Region of Southern Denmark,4134
+615443,"Snedsted, Viborg, Denmark",North Denmark Region,851
+608686,Ålsgårde,Capital Region of Denmark,4133
+615895,"Stenstrup, Fyn, Denmark",Region of Southern Denmark,4134
+615898,"Stenstrup, Vestsjalland, Denmark",Zealand Region,4132
+614304,Padborg,Region of Southern Denmark,4134
+615856,"Stege, Storstrom, Denmark",Zealand Region,4132
+617024,"Vejby Strand, Frederiksborg, Denmark",Capital Region of Denmark,4133
+617025,"Vejby, Frederiksborg, Denmark",Capital Region of Denmark,4133
+608819,"Asnæs, Vestsjalland, Denmark",Zealand Region,4132
+608836,"Assens, Denmark",Region of Southern Denmark,4134
+614637,Rødby,Zealand Region,4132
+614636,"Rødbyhavn, Storstrom, Denmark",Zealand Region,4132
+613976,Ørbæk,Region of Southern Denmark,4134
+610612,Gedved,Central Denmark Region,4131
+616379,"Tim, Ringkobing, Denmark",Central Denmark Region,4131
+617318,Vinderup,Central Denmark Region,4131
+609524,Broager,Region of Southern Denmark,4134
+608455,Aalestrup,North Denmark Region,851
+615899,"Stensved, Storstrom, Denmark",Zealand Region,4132
+611124,"Harlev, Arhus, Denmark",Central Denmark Region,4131
+611125,"Hårlev, Roskilde, Denmark",Zealand Region,4132
+609032,"Beder, Denmark",Central Denmark Region,4131
+613245,"Melby, Frederiksborg, Denmark",Capital Region of Denmark,4133
+615522,"Solbjerg, Arhus, Denmark",Central Denmark Region,4131
+609554,"Brøndby Strand, Kobenhavn, Denmark",Capital Region of Denmark,4133
+613904,"Oksbøl, Ribe, Denmark",Region of Southern Denmark,4134
+609274,Bogense,Region of Southern Denmark,4134
+611951,Jelling,Region of Southern Denmark,4134
+617460,Vrå,North Denmark Region,851
+608667,"Almind, Vejle, Denmark",Region of Southern Denmark,4134
+610281,Fjerritslev,North Denmark Region,851
+608665,"Allinge, Bornholm, Denmark",Capital Region of Denmark,4133
+609490,Bredsten,Region of Southern Denmark,4134
+610805,Græsted,Capital Region of Denmark,4133
+612224,Kibæk,Central Denmark Region,4131
+612467,"Kolind, Arhus, Denmark",Central Denmark Region,4131
+609230,"Blåvand, Ribe, Denmark",Region of Southern Denmark,4134
+616144,Svaneke,Capital Region of Denmark,4133
+616418,Tisvilde,Capital Region of Denmark,4133
+616417,"Tisvildeleje, Frederiksborg, Denmark",Capital Region of Denmark,4133
+614862,Sakskøbing,Zealand Region,4132
+616421,"Tjæreborg, Ribe, Denmark",Region of Southern Denmark,4134
+616842,"Ulfborg, Ringkobing, Denmark",Central Denmark Region,4131
+611527,Højby,Zealand Region,4132
+612404,"Knebel, Arhus, Denmark",Central Denmark Region,4131
+609138,"Bjæverskov, Roskilde, Denmark",Zealand Region,4132
+614700,"Rømø Kirkeby, Sonderjylland, Denmark",Region of Southern Denmark,4134
+616137,"Sunds, Ringkobing, Denmark",Central Denmark Region,4131
+612802,"Lem, Ringkobing, Denmark",Central Denmark Region,4131
+612808,Lemvig,Central Denmark Region,4131
+614030,"Ørsted, Arhus, Denmark",Central Denmark Region,4131
+611630,Høng,Zealand Region,4132
+611422,"Hjallerup, Nordjylland, Denmark",North Denmark Region,851
+612111,Karise,Zealand Region,4132
+608442,Aakirkeby,Capital Region of Denmark,4133
+608488,Aarup,Region of Southern Denmark,4134
+608740,"Ans, Viborg, Denmark",Central Denmark Region,4131
+609754,Dianalund,Zealand Region,4132
+609823,"Dronningmølle, Frederiksborg, Denmark",Capital Region of Denmark,4133
+609937,Ejby,Zealand Region,4132
+609936,"Ejby, Kobenhavn, Denmark",Capital Region of Denmark,4133
+609935,"Ejby, Fyn, Denmark",Region of Southern Denmark,4134
+610025,"Engesvang, Ringkobing, Denmark",Central Denmark Region,4131
+610169,"Fårup, Nordjylland, Denmark",North Denmark Region,851
+610509,"Gadstrup, Roskilde, Denmark",Zealand Region,4132
+610812,"Gram, Denmark",Region of Southern Denmark,4134
+610784,Gørlev,Zealand Region,4132
+611319,"Herfølge, Roskilde, Denmark",Zealand Region,4132
+611665,"Hornsyld, Vejle, Denmark",Central Denmark Region,4131
+612969,"Løgstrup, Viborg, Denmark",Central Denmark Region,4131
+613345,"Mørke, Arhus, Denmark",Central Denmark Region,4131
+614715,Rønnede,Zealand Region,4132
+615047,"Sjølund, Sonderjylland, Denmark",Region of Southern Denmark,4134
+615108,"Skals, Viborg, Denmark",Central Denmark Region,4131
+615091,Skævinge,Capital Region of Denmark,4133
+615772,"Spentrup, Arhus, Denmark",Central Denmark Region,4131
+615870,"Stenderup, Vejle, Denmark",Region of Southern Denmark,4134
+615880,Stenlille,Zealand Region,4132
+616462,"Toftlund, Sonderjylland, Denmark",Region of Southern Denmark,4134
+616671,"Trige, Arhus, Denmark",Central Denmark Region,4131
+617343,"Vipperød, Vestsjalland, Denmark",Zealand Region,4132
+608560,Ærøskøbing,Region of Southern Denmark,4134
+613922,Ølgod,Region of Southern Denmark,4134
+616116,"Suldrup, Nordjylland, Denmark",North Denmark Region,851
+608661,"Allingåbro, Arhus, Denmark",Central Denmark Region,4131
+610761,"Glumsø, Storstrom, Denmark",Zealand Region,4132
+613938,Ølsted,Capital Region of Denmark,4133
+608978,"Bandholm, Storstrom, Denmark",Zealand Region,4132
+609080,"Bindslev, Nordjylland, Denmark",North Denmark Region,851
+613211,"Marslev, Fyn, Denmark",Region of Southern Denmark,4134
+616387,Tinglev,Region of Southern Denmark,4134
+611549,"Højslev, Viborg, Denmark",Central Denmark Region,4131
+611693,"Hørve, Vestsjalland, Denmark",Zealand Region,4132
+611485,"Hjortshøj, Arhus, Denmark",Central Denmark Region,4131
+614654,"Rødkærsbro, Viborg, Denmark",Central Denmark Region,4131
