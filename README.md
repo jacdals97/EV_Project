@@ -64,8 +64,9 @@ The organization of the project is as follows:
     └── trends_preprocessing.ipynb
 ```
 The following is a chart visualising the different levels of aggregating and summarisation of the dataset. Each cylinder is a .pickle, .csv or otherwise structured dataset.
-
-<img width="612" alt="Screenshot 2021-12-16 at 14 33 20" src="https://user-images.githubusercontent.com/25800085/146381446-023d05ea-f1d8-47e8-b3ad-154ee1df66a2.png">
+<p align="center">
+  <img width="612"  alt="Screenshot 2021-12-16 at 14 33 20" src="https://user-images.githubusercontent.com/25800085/146381446-023d05ea-f1d8-47e8-b3ad-154ee1df66a2.png">
+</p>
 
 ## Data availability
 The data is also available at https://www.kaggle.com/askebredahlnielsen/electric-vehicles-in-denmark?fbclid=IwAR0-H8-BF_aD3lw_tTwCoMBplwYqCvb6Nl-bklifs92yQGCS8h_3cTFlYfM
