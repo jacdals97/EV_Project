@@ -1,0 +1,4 @@
+,City,Municipality,Region,year,FB_audience_size_lower_bound,FB_audience_size_upper_bound,Trends_slope,Trends_intercept
+0,Aalborg,Aalborg Kommune,Region Nordjylland,2021,19900.0,23400.0,0.321736412650166,15.495270390070914
+1,Aarhus,Aarhus Kommune,Region Midtjylland,2021,28300.0,33300.0,0.2775210775799678,17.253268321513
+2,København,Københavns Kommune,Region Hovedstaden,2021,121400.0,142800.0,0.2142388551165143,20.138092494089832
