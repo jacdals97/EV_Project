@@ -2,7 +2,10 @@
 
 ## Description
 
-We present a collection of datasets encompassing several dimensions linked to electric vehicles (EVs) including interest, EV charging infrastructure, purchases of EVs and relevant regional demographics. At an aggregate level we present a long format dataset that allows for temporal and spatial analysis  at the resolution of city, municipality and region across Denmark. The data is acquired through Google Trends, Facebook Marketing, PlugShare and Danmarks Statistik. The acquisitions are achieved by either web scraping, API calls, downloading of open data or manual annotation. Each data source produces a raw dataset from which the aggregated dataset is built. As such we present an additional 3-4 datasets including a 5 year weekly time series on Google Trends data from 319 Danish cities, a dataset documenting the Danish EV charging infrastructure and a proof of concept dataset on EV consumer audience sizes in Danish cities and municipalities. The entire collection of datasets allows for various hypotheses to be tested regarding electric vehicles.
+We present a collection of datasets encompassing several dimensions linked to electric vehicles (EVs) including interest, EV charging infrastructure, purchases of EVs and relevant regional demographics. At an aggregate level we present a long \todo{format}form dataset that allows for temporal and spatial analysis at the resolution of city, municipality and region across Denmark. The data is acquired through Google Trends, Facebook Marketing, PlugShare and Danmarks Statistik. The acquisitions are achieved by either web scraping, API calls, downloading of open data or manual annotation. Each data source produces a raw dataset from which the aggregated dataset is built. As such we present an additional $7$ datasets including a $5$-year weekly time series on Google Trends data, a dataset documenting the Danish EV charging infrastructure and a proof of concept dataset on EV consumer audience sizes in Danish cities and municipalities. The entire collection of datasets allows for various hypotheses to be tested regarding electric vehicles.
+
+## Data availability
+The data is also available at https://www.kaggle.com/askebredahlnielsen/electric-vehicles-in-denmark?fbclid=IwAR0-H8-BF_aD3lw_tTwCoMBplwYqCvb6Nl-bklifs92yQGCS8h_3cTFlYfM
 
 ## Project Organization
 The organization of the project is as follows:
@@ -68,5 +71,4 @@ The following is a chart visualising the different levels of aggregating and sum
   <img width="612"  alt="Screenshot 2021-12-16 at 14 33 20" src="https://user-images.githubusercontent.com/25800085/146381446-023d05ea-f1d8-47e8-b3ad-154ee1df66a2.png">
 </p>
 
-## Data availability
-The data is also available at https://www.kaggle.com/askebredahlnielsen/electric-vehicles-in-denmark?fbclid=IwAR0-H8-BF_aD3lw_tTwCoMBplwYqCvb6Nl-bklifs92yQGCS8h_3cTFlYfM
+
