@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel='stylesheet' type='text/css'>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <title>Back in the sand</title>
+    <style>
+		body {
+		  	font-size: 10px;
+		  	font-family: 'Open Sans', sans-serif;
+		  	font-weight: 400;
+		  	fill: black;
+		  	text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+		}
+        h1 {
+            color: #888
+        }
+        #container {
+            display: flex;
+            text-align: justify;
+            align-items: center;
+        }
+        #legend {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        #buttons {
+            display: flex;
+            flex-direction: column;
+        }
+        input[type="radio"] {
+            display: none;
+        }
+
+        .label_cols {
+            background-color: #CCC;
+            padding: 2%;
+            border-radius: 5px;
+            font-size: 14px;
+            margin: 1%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <div>
+            <h1 id="title">Your browser doesn't support the regex engine used in this visualization, please use a chromium-based browser (e.g. Chrome)</h1>
+        </div>
+        <div id="container">
+            <div id="chart">
+                <div id="map"></div>
+                <div id="legend"></div>
+            </div>
+            <div id="buttons"></div>
+        </div>
+    </div>
+
+    <script>
+        let EVDK = new Map()
+
+        const choose = function(v, col) {
+            if (lookup[col]["roll_func"] == "sum") {
+                return d3.sum(v, d=>d[col])
+            } else if (lookup[col]["roll_func"] == "single") {
+                return v[0][col]
+            } else if (lookup[col]["roll_func"] == "average") {
+                return d3.mean(v, d=>d[col])
+            }
+
+        }
+
+        const lookup = {
+            //"FB_audience_size_lower_bound" : {"label": "Audience lower bound", "roll_func": "single"},
+            "FB_audience_size_upper_bound" : {"label": "Audience upper bound", "roll_func": "sum"},
+            "Trends_slope" : {"label": "The slope of the EV trend?", "roll_func": "average"},
+            //"Trends_intercept" : ,
+            //"Trends_regression_R2" : ,
+            //"Trends_regression_R2_adj" : ,
+            //"Trends_mean" : ,
+            "Trends_is_trending" : {"label": "Is EV trending?", "roll_func": "average"},
+            "DST_EV_population" : {"label": "EV owners size", "roll_func": "single"},
+            "DST_population_size" : {"label": "Population size", "roll_func": "sum"},
+            "DST_population_density" : {"label": "Population density", "roll_func": "sum"},
+            "Plugshare_count_of_stations" : {"label": "Count of charging stations", "roll_func": "single"},
+            "Plugshare_count_of_plugs" : {"label": "Count of charging station plugs", "roll_func": "single"},
+            "Plugshare_closest_in_meters" : {"label": "Closest charging station (m)", "roll_func": "single"},
+            //"Plugshare_closest_in_meters_std" : ,
+        };
+
+        const regex = /((?<=avn)s?)? Kommune/gm;
+
+
+
+        Promise.all([
+            d3.json("municipalities.json"),
+            d3.csv("EVDK.csv", function(d) {
+                d["Municipality"] = d["Municipality"].replace(regex, "")
+                return d3.autoType(d)
+            })
+        ]).then(function(dataList){
+            let bb = dataList[0]
+            let data = dataList[1]
+            let bugger = d3.group(data, d => d.year)
+
+            const chartDiv = d3.select("#chart")
+            //d3.selectAll("#map g").remove()
+            
+            //d3.selectAll("#legend #slider-play").remove()
+            var totalWidth = chartDiv.clientWidth;
+            var setWidth = d3.min([totalWidth, window.innerHeight/0.8]);
+            
+            //Width and height
+            var latTop = 57.9;
+            var lonLeft = 7.8;
+            var lonRight = 15.3;
+            var width = setWidth*0.95;
+            var height = width * 0.7;
+            var zoomExtent = 5;
+            var scale = 55 * width / (lonRight - lonLeft);
+            var kommune = "";
+            var textHeight = (height * 0.032)
+            var xZoomScale = 1
+            var yZoomScale = 1
+
+            let projection = d3.geoMercator()
+                .scale(scale)
+                .translate([0, 0]);
+
+            projection.fitSize([width, height * 0.9], bb);
+
+            let geoGenerator = d3.geoPath()
+                .projection(projection);
+                            
+            let g = d3.select("#map").append("g")
+
+            let chartSVG = g.append("svg")
+                .style("width", width).style("height", height);
+
+            var defs = chartSVG.append("defs");
+            defs.append("pattern")
+                .attr("id", "diagonalHatch")
+                .attr("patternUnits", "userSpaceOnUse")
+                .attr("width", 4)
+                .attr("height", 4)
+                .append("path")
+                    .attr("d", "M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2")
+                    .attr("stroke", "#000000")
+                    .attr("stroke-width", 1);
+
+            var map = chartSVG.append("g");
+
+            let geos = map.selectAll("path")
+                    .attr("class", "kommunes")
+                    .data(bb.features)
+                    .join("path")
+                    .attr("d", geoGenerator)
+                    .attr("stroke", "#000")
+                    .attr("stroke-width", .5)
+            
+            var tooltip = map.append("text")
+                .attr("id", "tooltip")
+                .style("display", "block")
+                .style("text-anchor", "start")
+                .attr("font-size", textHeight)
+                //.attr("font-weight", "bold")
+                .attr("transform", `translate(${width * 0.55},${height * 0.19})`);
+
+            var trans = projection([lonLeft, latTop]);
+            projection.translate([-1 * trans[0], -1 * trans[1]]);
+
+            var zoom = d3.zoom()
+                .scaleExtent([1, zoomExtent])
+                .translateExtent([
+                    [0, 0],
+                    [width, height]
+                ])
+                .on("zoom", zoomed);
+
+            chartSVG.call(zoom);
+
+            function zoomed(event) {
+                map.attr("transform", event.transform)
+
+                map.selectAll("#tooltip")
+                    .attr("font-size", _ => (height * 0.032) / (event.transform.k))
+                    .attr("transform", function() {
+                        // debugger;
+                        xZoomScale = event.transform.k;
+                        yZoomScale = event.transform.k;
+                    });
+            };
+
+            const redraw = function(year, col) {
+                var data = bugger.get(year)
+                var data = d3.rollup(data, (v,i) => choose(v,col), d=> d.Municipality)
+
+                d3.select("#title").text(lookup[col]["label"])
+
+                min = d3.min(data, d => d[1]);
+                max = d3.max(data, d => d[1]);
+                
+                d3.selectAll("#legend #legend-play").remove()
+                var colorScale = d3.scaleLinear().domain([min,max])
+                    .range(["steelblue", "orange"])//["#ACC", "#35F"]);
+                
+                const f = d3.format(",.2f");
+
+
+                const legend = d3.select("#legend").append("g")
+                    .attr("id", "legend-play")
+                    //.attr("transform", `translate(${width*0.5},${height*0.92})`);
+
+                const legendSVG = legend.append("svg")
+                    .style("width", width).style("height", height*0.05);
+
+                legendSVG.append("rect")
+                    .attr("width", "50%")
+                    .attr("height", "40%")
+                    .style("fill", "url(#linear-gradient)")
+                    .attr("x", "25%")
+                    //.attr("y", "90%")
+
+                const slider = d3.select("#legend")
+                // slider.append("p").attr("id", "value-time")
+                    
+                var xScale = d3.scaleLinear()
+                    .range([width*0.25, width*0.75])
+                    .domain([min,max]);
+
+                var xAxis = d3.axisBottom()
+                    //.ticks(5) 
+                    .scale(xScale);
+
+                legendSVG.append("g")
+                    .attr("class", "axis")
+                    .attr("transform", `translate(0,${height*0.02})`)
+                    .call(xAxis);
+
+                var linearGradient = defs.append("linearGradient")
+                    .attr("id", "linear-gradient")
+                    .selectAll("stop")
+                    .data(colorScale.range())
+                    .enter().append("stop")
+                    .attr("offset", (d,i) => i/(colorScale.range().length-1))
+                    .attr("stop-color", d => d);
+
+                geos.attr("fill", (d,i) => data.get(d.properties.label_dk) ? colorScale(data.get(d.properties.label_dk)) : "url(#diagonalHatch)")
+                    .on("mouseover", function(m, d, i) {
+                        var highlightKom = d.properties.label_dk
+                        d3.selectAll(".kommunes")
+                            .filter(d => d.properties.label_dk == highlightKom)
+                            .attr("fill-opacity", "0.6");
+                        tooltip.style("display", null);
+                    })
+                    .on("mouseout", function(m, d, i) {
+                        var highlightKom = d.properties.label_dk
+                        d3.selectAll(".kommunes")
+                            .filter(d => d.properties.label_dk == highlightKom)
+                            .attr("fill-opacity", "1");
+                        tooltip.style("display", "none");
+                    })
+                    .on("mousemove", function(m, d, i) {
+                        var xPosition = (d3.pointer(event)[0])///xZoomScale;
+                        var yPosition = (d3.pointer(event)[1])///yZoomScale;
+                        //tooltip.attr("transform", "translate(" + xPosition + "," + yPosition + ")");
+                        tooltip.text(`${d.properties.label_dk}: ${data.get(d.properties.label_dk) ? f(data.get(d.properties.label_dk)) : "N/A"}`);
+                    });
+            }
+
+            const keys = Object.keys(lookup)
+            
+            d3.select("#buttons").selectAll("button")
+                .data(keys)
+                .enter()
+                .append("label")
+                    .attr("class", "label_cols")
+                    .text(d => lookup[d]["label"])
+                .append("input")
+                    .attr("type", "radio")
+                    .attr("name", "col-select")
+                    .property("checked", (d,i) => i == Object.keys(lookup).findIndex(e => e == "DST_population_size"))
+                    .attr("class", "cols")
+                    .attr("id", d => d)
+                    .on("click", datum => {
+                        d3.selectAll(".label_cols").style("background-color", null)
+                        checked = d3.select(".cols:checked")
+                        checked.select(function() { return this.parentNode; }).style("background-color", "#EEE").style("border", "1px solid #AAA")
+                        redraw(+d3.select("#year-value").text(), datum.srcElement.id)
+                    });
+
+            const years = [...bugger.keys()].sort();
+
+            var slider = d3.select("#legend")
+
+            slider.append("input")
+                .attr("type", "range")
+                .attr("id", "year")
+                .attr("min", d3.min(years))
+                .attr("max", d3.max(years))
+                .attr("step", 1)
+                .style("width", "20%")
+                .style("padding-left", width*0.375)
+                .attr("value", d3.min(years))
+                .on("input", function() {
+                    d3.select("#year-value").text(+this.value);
+                    redraw(+d3.select("#year-value").text(), d3.select(".cols:checked").attr("id"));
+                })
+
+            function repeat() {
+                d3.select("#year")
+                    .attr("value", d3.min(years))
+                    .transition()
+                    .duration(10000)
+                    .ease(d3.easeLinear)
+                    .tween("value", function() {
+                        var i = d3.interpolate(this.min, this.max);
+                        return function(t) {
+                            d3.select("#year-value").text(+this.value);
+                            redraw(+d3.select("#year-value").text(), d3.select(".cols:checked").attr("id"));
+                            this.value = i(t);
+                        };
+                    })
+            }
+                
+            slider.append("label")
+                .attr("for", "#year")
+                .attr("id", "year-value")
+                .text(2017)
+                
+
+            d3.select("#DST_population_size").dispatch("click");
+
+        });
+
+    </script>
+</body>
+</html>
