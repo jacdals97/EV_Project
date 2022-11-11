@@ -102,7 +102,7 @@
 
 
         Promise.all([
-            d3.json("municipalities.json"),
+            d3.json("explorer_visualization/municipalities.json"),
             d3.csv("EVDK.csv", function(d) {
                 d["Municipality"] = d["Municipality"].replace(regex, "")
                 return d3.autoType(d)
@@ -113,9 +113,6 @@
             let bugger = d3.group(data, d => d.year)
 
             const chartDiv = d3.select("#chart")
-            //d3.selectAll("#map g").remove()
-            
-            //d3.selectAll("#legend #slider-play").remove()
             var totalWidth = chartDiv.clientWidth;
             var setWidth = d3.min([totalWidth, window.innerHeight/0.8]);
             
@@ -167,13 +164,35 @@
                     .attr("stroke", "#000")
                     .attr("stroke-width", .5)
             
-            var tooltip = map.append("text")
+            var ttContainer = map.append("g")
+                .attr("transform", `translate(${width * 0.55},${height * 0.19})`)
+                .style("display", "none")
+                
+                var ttBackground = ttContainer.append("rect")
+                .attr("width", 100)
+                .attr("height", 50)
+                .attr("y", -45)
+                .attr("x", -5)
+                .attr("rx", 2)
+                .attr("ry", 2)
+                .attr("fill","rgb(135, 206, 235)")
+                .style("opacity", .75)
+                .style("pointer-events", "none")
+
+
+            var ttPlot = ttContainer.append("div")
+                .attr("id", "plot")
+
+            var ttTitle = ttContainer.append("text")
+                .attr("id", "ttTitle")
+                .style("color", "grey")
+                .attr("transform", `translate(0,${-textHeight})`);
+
+            
+            var tooltip = ttContainer.append("text")
                 .attr("id", "tooltip")
-                .style("display", "block")
-                .style("text-anchor", "start")
                 .attr("font-size", textHeight)
-                //.attr("font-weight", "bold")
-                .attr("transform", `translate(${width * 0.55},${height * 0.19})`);
+                .style("text-anchor", "start")
 
             var trans = projection([lonLeft, latTop]);
             projection.translate([-1 * trans[0], -1 * trans[1]]);
@@ -191,6 +210,10 @@
             function zoomed(event) {
                 map.attr("transform", event.transform)
 
+                map.selectAll("#ttTitle")
+                    .attr("font-size", _ => (height * 0.02) / (event.transform.k))
+                    .attr("transform", `translate(0, ${-textHeight / event.transform.k})`)
+
                 map.selectAll("#tooltip")
                     .attr("font-size", _ => (height * 0.032) / (event.transform.k))
                     .attr("transform", function() {
@@ -198,6 +221,11 @@
                         xZoomScale = event.transform.k;
                         yZoomScale = event.transform.k;
                     });
+
+                ttBackground.attr("width", 120 / event.transform.k)
+                    .attr("height", 50 / event.transform.k)
+                    .attr("y", -45 / event.transform.k)
+                    .attr("x", -5 / event.transform.k)
             };
 
             const redraw = function(year, col) {
@@ -214,11 +242,11 @@
                     .range(["steelblue", "orange"])//["#ACC", "#35F"]);
                 
                 const f = d3.format(",.2f");
+                const f2 = d3.format(",.0f");
 
 
                 const legend = d3.select("#legend").append("g")
                     .attr("id", "legend-play")
-                    //.attr("transform", `translate(${width*0.5},${height*0.92})`);
 
                 const legendSVG = legend.append("svg")
                     .style("width", width).style("height", height*0.05);
@@ -238,7 +266,6 @@
                     .domain([min,max]);
 
                 var xAxis = d3.axisBottom()
-                    //.ticks(5) 
                     .scale(xScale);
 
                 legendSVG.append("g")
@@ -260,20 +287,37 @@
                         d3.selectAll(".kommunes")
                             .filter(d => d.properties.label_dk == highlightKom)
                             .attr("fill-opacity", "0.6");
-                        tooltip.style("display", null);
+                        ttContainer.style("display", null);
                     })
                     .on("mouseout", function(m, d, i) {
                         var highlightKom = d.properties.label_dk
                         d3.selectAll(".kommunes")
                             .filter(d => d.properties.label_dk == highlightKom)
                             .attr("fill-opacity", "1");
-                        tooltip.style("display", "none");
+                        ttContainer.style("display", "none");
                     })
                     .on("mousemove", function(m, d, i) {
-                        var xPosition = (d3.pointer(event)[0])///xZoomScale;
-                        var yPosition = (d3.pointer(event)[1])///yZoomScale;
-                        //tooltip.attr("transform", "translate(" + xPosition + "," + yPosition + ")");
-                        tooltip.text(`${d.properties.label_dk}: ${data.get(d.properties.label_dk) ? f(data.get(d.properties.label_dk)) : "N/A"}`);
+                        var xPosition = (d3.pointer(event)[0])
+                        var yPosition = (d3.pointer(event)[1])
+                        var dataPoint = data.get(d.properties.label_dk)
+
+                        ttTitle.text(d.properties.label_dk)
+
+                        if (dataPoint) {
+                            if (Number.isInteger(dataPoint)) {
+                                label = f2(dataPoint)
+                            } else {
+                                label = f(dataPoint)
+                            }
+                        } else {
+                            label = "N/A"
+                        }
+                        tooltip.text(`${label}`)
+                        if (xZoomScale > 1) {
+                            ttContainer.attr("transform", `translate(${xPosition + 2.5}, ${yPosition + 2.5})`)
+                        } else {
+                            ttContainer.attr("transform", `translate(${width * 0.55},${height * 0.19})`);
+                        }
                     });
             }
 
